@@ -9,4 +9,13 @@ html,body
     margin: 0px;
     padding: 0px;
     overflow-x: hidden; 
+    background: #f0ecff;
+    scrollbar-width: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }

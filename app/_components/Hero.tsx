@@ -21,7 +21,11 @@ const Header = () => {
         {companies.map((company, index) => (
           <React.Fragment key={index}>
             <div className='flex flex-row'>
-              <div className='flex items-center w-10 h-10 border-white border'>Logo</div>
+              <div className='flex items-center w-10 h-10 border-white border'><img 
+                src='/images/hero-logo.png' 
+                alt='chart' 
+                className="w-full h-full object-cover rounded-md"
+              /></div>
               <div className='hidden md:block  flex-col pl-4'>
   <div className='text-white font-semibold'>{company.companyName}</div>
   <div className='text-[12px] text-white'>{company.department}</div>
