@@ -10,33 +10,36 @@ import Sponsors from "./_components/cards/Sponsors";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="flex flex-col bg-white scrollbar-hide">
       {/* Logo section with responsive padding and height */}
       <div className="flex w-full h-[10vh] items-center pl-10 sm:pl-16 md:pl-28 text-[#952bff] font-bold">
         Globixo
       </div>
 
       {/* Background image section with responsive height */}
-      <div className="bg-[#f0ecff] relative flex-grow w-full h-auto sm:h-[75vh] md:h-[68vh] bg-my_bg_image bg-cover bg-center">
+      <div className="bg-[#f0ecff] relative w-[100%] h-[80vh] sm:h-[75vh] md:h-[68vh] bg-my_bg_image bg-cover bg-center scrollbar-hide">
         {/* Hero section */}
         <Hero />
-      </div>
-
-      {/* Overlapping content */}
-      <div className="flex-grow bg-[#f0ecff] sm:pt-4 sm:pb-4">
-        <DeskTop_Order />
-        <Mobile_Order />
+        
+        {/* Overlapping content */}
+        <div className="bottom-0 left-0 w-full  bg-[#f0ecff] sm:bg-transparent sm:absolute sm:top-auto sm:bottom-auto sm:pt-4 sm:pb-0 scrollbar-hide">
+          <DeskTop_Order />
+          <Mobile_Order /> 
+             <Footer />
+       
+        </div>
+        
       </div>
 
       {/* Footer Section */}
-      <Footer />
+    
     </div>
   );
 }
 
 const DeskTop_Order = () => {
   return (
-    <div className="hidden sm:flex sm:flex-row w-full sm:px-24 gap-4">
+    <div className="hidden sm:flex sm:flex-row w-full sm:px-24 gap-4 pb-20">
       {/* Company's Business and Overview */}
       <div className="flex flex-col sm:w-[62%] gap-4">
         <Company_Business />
@@ -53,11 +56,11 @@ const DeskTop_Order = () => {
       </div>
     </div>
   );
-};
+}
 
 const Mobile_Order = () => {
   return (
-    <div className="flex flex-col sm:hidden w-full sm:px-20 gap-4">
+    <div className="flex flex-col sm:hidden w-full sm:px-20 gap-4 ">
       <Exhibitor_Contact />
       <Company_Business />
       <Company_Overview />
@@ -68,13 +71,13 @@ const Mobile_Order = () => {
       <Sponsors />
     </div>
   );
-};
+}
 
 // Footer Component
 const Footer = () => {
   return (
-    <div className="flex justify-center items-center h-16 bg-[#12002e] text-[#9b94a8] font-semibold">
-      <p>All rights reserved.</p>
+    <div className="flex  justify-center items-center h-16  bg-[#952bff] text-[#f0ecff] font-semibold">
+      <p>© 2024 All rights reserved.</p>
     </div>
   );
-};
+}

@@ -8,7 +8,7 @@ const filesData = [
 
 const Files = () => {
   return (
-    <div className='w-full pb-20'>
+    <div className='w-full '>
       <div className="bg-[#ffffff] px-10 w-full flex flex-col p-6 rounded-md gap-6">
         <div className='text-[20px] font-bold'>Files</div>
         
