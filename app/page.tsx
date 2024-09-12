@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="flex flex-col bg-white scrollbar-hide">
       {/* Logo section with responsive padding and height */}
-      <div className="flex w-full h-[10vh] items-center pl-10 sm:pl-16 md:pl-28 text-[#952bff] font-bold">
+      <div className="flex w-full h-[10vh] items-center pl-10 sm:pl-16 md:pl-28 text-[#952bff] font-bold text-[30px]">
         Globixo
       </div>
 
