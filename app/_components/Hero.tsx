@@ -1,6 +1,7 @@
 import React from 'react'
 import Heading from './Heading';
 import Venu_Location_Details from './Venu_Location_Details';
+import { Pencil } from 'lucide-react';
 const companies = [
     {
         companyName: "Zoloni",
@@ -42,8 +43,13 @@ const Header = () => {
       </div>
       <Heading/>
       <Venu_Location_Details/>
-      <div className='pt-10 w-full'>
-      <button className='bg-[#9039e7]  w-full sm:w-[400px] rounded-md h-10 text-white text-[20px] font-medium' >Contact Us</button>
+      <div className='pt-10 w-full '>
+     <button className='flex p-6 justify-center items-center bg-[#9039e7] w-full sm:w-[400px] rounded-lg h-10 text-white text-[20px] font-medium '>
+  {/* Show "Edit Your Profile" on mobile and "Contact Us" on larger screens */}
+  <span className=" flex flex-row gap-3 justify-center items-center  sm:hidden "><Pencil size={14}/>Edit Exhibition Profile</span>
+  <span className="hidden sm:block">Contact Us</span>
+</button>
+
       </div>
      
     </div>
